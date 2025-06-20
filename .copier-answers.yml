@@ -7,7 +7,5 @@ _src_path: https://github.com/bec-project/plugin_copier_template.git
 make_commit: true
 project_name: bec_testing_plugin
 widget_plugins_input:
--   name: ExampleWidgetPlugin
+-   name: example_widget_plugin
     use_ui: true
--   name: NoUiWidgetPlugin
-    use_ui: false
