@@ -17,10 +17,11 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QSizePolicy, QWidget)
 
-class Ui_Examplewidgetplugin(object):
+class Ui_examplewidgetplugin(object):
     def setupUi(self, examplewidgetplugin):
         if not examplewidgetplugin.objectName():
             examplewidgetplugin.setObjectName(u"examplewidgetplugin")
+        examplewidgetplugin.resize(150, 150)
 
         self.retranslateUi(examplewidgetplugin)
 
