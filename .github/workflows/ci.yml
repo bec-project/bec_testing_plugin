@@ -49,28 +49,28 @@ jobs:
       - name: Checkout BEC Core
         uses: actions/checkout@v4
         with:
-          repository: bec/bec
+          repository: bec-project/bec
           ref: "${{ inputs.BEC_CORE_BRANCH || 'main' }}"
           path: ./bec
 
       - name: Checkout Ophyd Devices
         uses: actions/checkout@v4
         with:
-          repository: bec/ophyd_devices
+          repository: bec-project/ophyd_devices
           ref: "${{ inputs.OPHYD_DEVICES_BRANCH || 'main' }}"
           path: ./ophyd_devices
 
       - name: Checkout BEC Widgets
         uses: actions/checkout@v4
         with:
-          repository: bec/bec_widgets
+          repository: bec-project/bec_widgets
           ref: "${{ inputs.BEC_WIDGETS_BRANCH || 'main' }}"
           path: ./bec_widgets
 
       - name: Checkout BEC Plugin Repository
         uses: actions/checkout@v4
         with:
-          repository: bec/bec_testing_plugin
+          repository: bec-project/bec_testing_plugin
           ref: "${{ inputs.BEC_PLUGIN_REPO_BRANCH || github.head_ref || github.sha }}"
           path: ./bec_testing_plugin
 
@@ -89,7 +89,7 @@ jobs:
           uv pip install --system -e ./bec/bec_lib[dev]
           uv pip install --system -e ./bec/bec_ipython_client
           uv pip install --system -e ./bec/bec_server[dev]
-          uv pip install --system -e ./bec_widgets[dev,pyside6]
+          uv pip install --system -e ./bec_widgets[dev]
           uv pip install --system -e ./bec_testing_plugin
 
       - name: Run Pytest with Coverage
