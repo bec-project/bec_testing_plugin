@@ -46,6 +46,17 @@ jobs:
         with:
           python-version: "${{ inputs.PYTHON_VERSION || '3.11' }}"
 
+      - name: Checkout BEC Plugin Repository
+        uses: actions/checkout@v4
+        with:
+          repository: bec/bec_testing_plugin
+          ref: "${{ inputs.BEC_PLUGIN_REPO_BRANCH || github.head_ref || github.sha }}"
+          path: ./bec_testing_plugin
+
+      - name: Lint for merge conflicts
+        run: |
+          
+
       - name: Checkout BEC Core
         uses: actions/checkout@v4
         with:
@@ -67,13 +78,6 @@ jobs:
           ref: "${{ inputs.BEC_WIDGETS_BRANCH || 'main' }}"
           path: ./bec_widgets
 
-      - name: Checkout BEC Plugin Repository
-        uses: actions/checkout@v4
-        with:
-          repository: bec/bec_testing_plugin
-          ref: "${{ inputs.BEC_PLUGIN_REPO_BRANCH || github.head_ref || github.sha }}"
-          path: ./bec_testing_plugin
-
       - name: Install dependencies
         shell: bash
         run: |
@@ -89,7 +93,7 @@ jobs:
           uv pip install --system -e ./bec/bec_lib[dev]
           uv pip install --system -e ./bec/bec_ipython_client
           uv pip install --system -e ./bec/bec_server[dev]
-          uv pip install --system -e ./bec_widgets[dev,pyside6]
+          uv pip install --system -e ./bec_widgets[dev]
           uv pip install --system -e ./bec_testing_plugin
 
       - name: Run Pytest with Coverage
