@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.2.0 (2025-12-11)
+
+### Features
+
+- Add a macro function for testing
+  ([`7ce3e28`](https://github.com/bec-project/bec_testing_plugin/commit/7ce3e280ba95bb105d571c8fdf15552dc9830084))
+
+- Add a macro function for testing
+  ([`7c777f2`](https://github.com/bec-project/bec_testing_plugin/commit/7c777f2acd05c22239f91349f4609fa7a773e2a7))
+
+
 ## v0.1.0 (2025-12-09)
 
 ### Bug Fixes
