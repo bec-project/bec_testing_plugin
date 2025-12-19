@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.3.0 (2025-12-19)
+
+### Features
+
+- Add device progress scan
+  ([`1b53602`](https://github.com/bec-project/bec_testing_plugin/commit/1b53602e6294441169f24516ac4b05d9b60d38ef))
+
+
 ## v0.2.0 (2025-12-11)
 
 ### Features
