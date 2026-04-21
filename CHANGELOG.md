@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.3.1 (2026-04-21)
+
+### Bug Fixes
+
+- Update bw client to provide import modules
+  ([`2dfb145`](https://github.com/bec-project/bec_testing_plugin/commit/2dfb145791f4b42b72179c89f09b96a9c2b4c07f))
+
+
 ## v0.3.0 (2025-12-19)
 
 ### Features
