@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from bec_lib.logger import bec_logger
 
-from bec_widgets.cli.rpc.rpc_base import RPCBase, rpc_call
+from bec_widgets.cli.rpc.rpc_base import RPCBase, rpc_call, rpc_timeout
 
 logger = bec_logger.logger
 
@@ -16,16 +16,46 @@ _Widgets = {}
 
 
 class Examplewidgetplugin(RPCBase):
+    _IMPORT_MODULE = (
+        "bec_testing_plugin.bec_widgets.widgets.ExampleWidgetPlugin.ExampleWidgetPlugin"
+    )
+
     @rpc_call
     def remove(self):
         """
         Cleanup the BECConnector
+        """
+
+    @rpc_call
+    def attach(self):
+        """
+        None
+        """
+
+    @rpc_call
+    def detach(self):
+        """
+        Detach the widget from its parent dock widget (if widget is in the dock), making it a floating widget.
         """
 
 
 class Nouiwidgetplugin(RPCBase):
+    _IMPORT_MODULE = "bec_testing_plugin.bec_widgets.widgets.NoUiWidgetPlugin.NoUiWidgetPlugin"
+
     @rpc_call
     def remove(self):
         """
         Cleanup the BECConnector
+        """
+
+    @rpc_call
+    def attach(self):
+        """
+        None
+        """
+
+    @rpc_call
+    def detach(self):
+        """
+        Detach the widget from its parent dock widget (if widget is in the dock), making it a floating widget.
         """
