@@ -10,7 +10,8 @@ modifier plugin that runs multiple actions in sequence with conditional logic to
 from bec_server.scan_server.scans.scan_modifier import ScanModifier, scan_hook_impl
 
 
-class Bec_testing_pluginScanModifier(ScanModifier):
+
+class BecTestingPluginScanModifier(ScanModifier):
     """
     Scan modifier for bec_testing_plugin.
     

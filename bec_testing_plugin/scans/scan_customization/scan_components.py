@@ -9,5 +9,6 @@ These components can be used to encapsulate reusable logic, interact with device
 from bec_server.scan_server.scans.scan_components import ScanComponents
 
 
-class Bec_testing_pluginScanComponents(ScanComponents):
+
+class BecTestingPluginScanComponents(ScanComponents):
     """Scan components for bec_testing_plugin."""
