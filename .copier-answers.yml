@@ -2,8 +2,8 @@
 # It is needed to track the repo template version, and editing may break things.
 # This file will be overwritten by copier on template updates.
 
-_commit: v1.2.2
-_src_path: https://github.com/bec-project/plugin_copier_template.git
+_commit: v1.2.8-1-g5f2bbf6
+_src_path: /Users/wakonig_k/software/work/bec_plugin_copier_template
 make_commit: true
 project_name: bec_testing_plugin
 widget_plugins_input:
