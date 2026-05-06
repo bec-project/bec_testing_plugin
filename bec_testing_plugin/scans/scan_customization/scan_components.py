@@ -5,9 +5,7 @@ The scan components module allows you to define custom components that can be us
 These components can be used to encapsulate reusable logic, interact with devices, or perform specific actions during the scan lifecycle.
 """
 
-
 from bec_server.scan_server.scans.scan_components import ScanComponents
-
 
 
 class BecTestingPluginScanComponents(ScanComponents):
