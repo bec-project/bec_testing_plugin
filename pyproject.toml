@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "bec_testing_plugin"
 version = "0.3.1"
 description = "A plugin repository for BEC"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Programming Language :: Python :: 3",
@@ -38,6 +38,9 @@ plugin_file_writer = "bec_testing_plugin.file_writer"
 
 [project.entry-points."bec.scans"]
 plugin_scans = "bec_testing_plugin.scans"
+
+[project.entry-points."bec.scans.scan_modifier"]
+plugin_scan_modifier = "bec_testing_plugin.scans.scan_customization.scan_modifier"
 
 [project.entry-points."bec.scans.metadata_schema"]
 plugin_metadata_schema = "bec_testing_plugin.scans.metadata_schema"
