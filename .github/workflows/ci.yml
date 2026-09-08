@@ -90,8 +90,13 @@ jobs:
           uv pip install --system -e ./bec/bec_ipython_client
           uv pip install --system -e ./bec/bec_server[dev]
           uv pip install --system -e ./bec_widgets[dev]
-          uv pip install --system -e ./bec_testing_plugin
+          uv pip install --system -e "./bec_testing_plugin[dev]"
 
       - name: Run Pytest with Coverage
         id: coverage
-        run: pytest --random-order --cov=./bec_testing_plugin --cov-config=./bec_testing_plugin/pyproject.toml --cov-branch --cov-report=xml --no-cov-on-fail ./bec_testing_plugin/tests/ || test $? -eq 5
+        run: |
+          if coverage run --rcfile=./bec_testing_plugin/pyproject.toml --branch --source=./bec_testing_plugin -m pytest --random-order ./bec_testing_plugin/tests/; then
+            coverage xml --rcfile=./bec_testing_plugin/pyproject.toml
+          else
+            test $? -eq 5
+          fi
