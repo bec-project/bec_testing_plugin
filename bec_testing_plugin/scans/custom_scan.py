@@ -1,4 +1,4 @@
-from bec_server.scan_server.scans import LineScan
+from bec_server.scan_server.scans.line_scan import LineScan
 
 
 class CustomTestingScan(LineScan):

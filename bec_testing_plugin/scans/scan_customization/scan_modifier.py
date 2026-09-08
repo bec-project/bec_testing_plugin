@@ -13,14 +13,14 @@ from bec_server.scan_server.scans.scan_modifier import ScanModifier, scan_hook_i
 class BecTestingPluginScanModifier(ScanModifier):
     """
     Scan modifier for bec_testing_plugin.
-    
+
     By inheriting from the ScanModifier base class, you get access to currently running scan (self.scan), the devices (self.dev), the scan info (self.scan_info),
     the scan components (self.components) and the scan actions (self.actions).
     """
 
-    def __init__(self, **kwargs):
+    def __init__(self, *args, **kwargs):
         """Initialize the scan modifier."""
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)
 
     # Example of running code before the scan stage for a specific scan
     # @scan_hook_impl("stage", "before")
@@ -29,5 +29,3 @@ class BecTestingPluginScanModifier(ScanModifier):
     #     self.actions.send_client_info("Custom stage logic executed by ScanModifier.")
     #     if self.scan_info.scan_name == "example_scan":
     #         self.dev.samx.set(20)
-
-    
