@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.3.2 (2026-09-27)
+
+### Bug Fixes
+
+- Migrate plugin scans to v4
+  ([`f3c8bac`](https://github.com/bec-project/bec_testing_plugin/commit/f3c8bac246f54987e2e5dedd5030159ff36ff53a))
+
+- Use coverage instead of pytest-cov
+  ([`c0279ee`](https://github.com/bec-project/bec_testing_plugin/commit/c0279eee3539eb4af32e42675da0e78f45a394fc))
+
+
 ## v0.3.1 (2026-04-21)
 
 ### Bug Fixes
