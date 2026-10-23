@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.4.0 (2026-10-23)
+
+### Features
+
+- Add macros and config for macros v2
+  ([`df478e5`](https://github.com/bec-project/bec_testing_plugin/commit/df478e587fe3ddf1a2b68b63e2f606bf961fa1ad))
+
+
 ## v0.3.2 (2026-09-27)
 
 ### Bug Fixes
