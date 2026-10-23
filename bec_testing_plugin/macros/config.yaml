@@ -1,0 +1,22 @@
+# Default macro config for this plugin. The BEC client loads it at startup and shares it with all
+# other connected clients, so everybody sees the same `bec.macros` namespace.
+#
+# Each key is a macro or namespace name, each value a reference:
+#   name: package.module::function    -> bec.macros.name is that function
+#   name: package.module              -> bec.macros.name is a namespace of the module's functions
+#   name: /path/to/file.py::function  -> as above, for a python file instead of a module
+#   name: /path/to/directory          -> the directory's contents are merged into the namespace
+#                                        containing the entry: each .py file becomes a namespace of
+#                                        its functions and each subdirectory a nested namespace.
+#                                        The key is only a label.
+# Nested mappings become nested namespaces.
+#
+# Two placeholders are resolved on each client: <user_macros> is the user macro directory from the
+# service config (user_macros.base_path) and <plugin_macros> is the `macros` directory of this plugin.
+macros:
+  local: <user_macros>
+  shared: <plugin_macros>
+
+# Macros which are also available directly in the interactive shell, by their path under bec.macros
+global_in_interactive_shell:
+  - macro_test.macro_test
